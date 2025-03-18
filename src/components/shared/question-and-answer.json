@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_question_and_answers",
+  "info": {
+    "displayName": "Question and Answer",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

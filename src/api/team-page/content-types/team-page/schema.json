@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_pages",
+  "info": {
+    "singularName": "team-page",
+    "pluralName": "team-pages",
+    "displayName": "TeamPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "teamName": {
+      "type": "string",
+      "required": true
+    },
+    "mail": {
+      "type": "email"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text"
+      ]
+    }
+  }
+}

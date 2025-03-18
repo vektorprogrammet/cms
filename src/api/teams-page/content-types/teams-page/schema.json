@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "teams_pages",
+  "info": {
+    "singularName": "teams-page",
+    "pluralName": "teams-pages",
+    "displayName": "TeamsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text"
+    }
+  }
+}

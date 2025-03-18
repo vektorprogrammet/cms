@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "schools_pages",
+  "info": {
+    "singularName": "schools-page",
+    "pluralName": "schools-pages",
+    "displayName": "SchoolsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "introduction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text",
+      "required": true
+    }
+  }
+}

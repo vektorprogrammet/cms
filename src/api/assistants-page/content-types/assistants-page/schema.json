@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "assistants_pages",
+  "info": {
+    "singularName": "assistants-page",
+    "pluralName": "assistants-pages",
+    "displayName": "AssistantsPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.image"
+      ]
+    }
+  }
+}

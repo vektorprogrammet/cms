@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_q_and_a_sections",
+  "info": {
+    "displayName": "Q&A Section",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.question-and-answer"
+    }
+  }
+}

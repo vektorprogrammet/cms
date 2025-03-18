@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_text_and_images",
+  "info": {
+    "displayName": "Text and Image",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.image"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text"
+    }
+  }
+}
