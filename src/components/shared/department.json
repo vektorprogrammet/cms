@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_departments",
+  "info": {
+    "displayName": "Department",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "Department": {
+      "type": "enumeration",
+      "enum": [
+        "Bergen",
+        "Trondheim",
+        "Ås",
+        "Hovedstyret"
+      ]
+    }
+  }
+}

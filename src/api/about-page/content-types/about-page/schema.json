@@ -24,10 +24,10 @@
       ],
       "required": true
     },
-    "questions": {
+    "faqSection": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.q-and-a-section"
+      "component": "shared.faq-section"
     }
   }
 }

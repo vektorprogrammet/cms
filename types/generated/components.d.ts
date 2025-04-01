@@ -1,5 +1,31 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedDepartment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_departments';
+  info: {
+    displayName: 'Department';
+    icon: 'earth';
+  };
+  attributes: {
+    Department: Schema.Attribute.Enumeration<
+      ['Bergen', 'Trondheim', '\u00C5s', 'Hovedstyret']
+    >;
+  };
+}
+
+export interface SharedFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_sections';
+  info: {
+    description: '';
+    displayName: 'FAQ Section';
+    icon: 'discuss';
+  };
+  attributes: {
+    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedImage extends Struct.ComponentSchema {
   collectionName: 'components_shared_images';
   info: {
@@ -19,18 +45,6 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-  };
-}
-
-export interface SharedQAndASection extends Struct.ComponentSchema {
-  collectionName: 'components_shared_q_and_a_sections';
-  info: {
-    displayName: 'Q&A Section';
-    icon: 'discuss';
-  };
-  attributes: {
-    questions: Schema.Attribute.Component<'shared.question-and-answer', true>;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -89,9 +103,10 @@ export interface SharedTextAndImage extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.department': SharedDepartment;
+      'shared.faq-section': SharedFaqSection;
       'shared.image': SharedImage;
       'shared.media': SharedMedia;
-      'shared.q-and-a-section': SharedQAndASection;
       'shared.question-and-answer': SharedQuestionAndAnswer;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

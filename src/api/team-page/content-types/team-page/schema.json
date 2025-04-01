@@ -24,8 +24,15 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "shared.rich-text"
+        "shared.rich-text",
+        "shared.text-and-image",
+        "shared.image"
       ]
+    },
+    "Department": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.department"
     }
   }
 }

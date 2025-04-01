@@ -388,6 +388,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqSection: Schema.Attribute.Component<'shared.faq-section', true>;
     introduction: Schema.Attribute.Blocks & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -396,7 +397,6 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    questions: Schema.Attribute.Component<'shared.q-and-a-section', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -564,10 +564,13 @@ export interface ApiTeamPageTeamPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.DynamicZone<['shared.rich-text']>;
+    content: Schema.Attribute.DynamicZone<
+      ['shared.rich-text', 'shared.text-and-image', 'shared.image']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Department: Schema.Attribute.Component<'shared.department', false>;
     description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
